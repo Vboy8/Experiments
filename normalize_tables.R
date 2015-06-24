@@ -42,5 +42,30 @@ normalizeTable <- function(source){
 	dataTable2 = data.frame(Patient_ID, Event_ID, Diagnosis, stringsAsFactors=FALSE)
 
 	#export normalized dataframe to csv
-	write.csv(x=dataTable2, file="example_normalized.csv", row.names = FALSE)
+	write.csv(x=dataTable2, file="normalized.csv", row.names = FALSE)
 }
+
+
+
+# This is the test script:
+
+normalizeTable("example.csv")
+
+#
+# This is the result when the test script works:
+#
+# Patient_ID	Event_ID	Diagnosis
+# 1					1			a
+# 1					1			b
+# 1					2			c
+# 2					3			d
+# 2					3			e
+# 2					3			f
+# 3					4			g
+# 3					5			h
+# 3					5			i
+# 3					6			j
+#
+# (This should all be displayed in a CSV
+# file labeled "normalized.csv")
+#
